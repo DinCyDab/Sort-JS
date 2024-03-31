@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        
+        <div>
+            <form name="myForm" onsubmit="return validateForm()" style="color:white">
+                Input Array Size: 
+                <input type="number" name="sizeInput">
+                <input type="submit" value="Submit">
+            </form>
+            <form name="myForm" onsubmit="return resetForm()" style="color:white">
+                <input type="submit" value="Reset">
+            </form>
+        </div>
+        <div class="container" id="container">
+
+        </div>
+        <div class="next-button" id="next-button">
+            <p>NEXT</p>
+        </div>
+        <div class="temp-holder" id="temp-holder">
+            <p>TEMP</p>
+        </div>
+        <div class="arrow" id="arrow-left">↓</div>
+        <div class="arrow" id="arrow-right">↓</div>
+        <div class="sorted" id="sorted">SORTED</div>
     </body>
     <script src="sort.js"></script>
 </html>
