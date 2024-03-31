@@ -29,6 +29,9 @@ function validateForm(){
 }
 
 function resetForm(){
+    if(isDone == false){
+        return false;
+    }
     let container = document.getElementById("container");
     isDone = false;
     leftSide = 50;
@@ -38,6 +41,10 @@ function resetForm(){
         container.removeChild(box[x]);
     }
     sorted.style.opacity = 0;
+    arrowLeft.style.left = 0 + "px";
+    arrowLeft.style.opacity = 0;
+    arrowRight.style.left = 0 + "px";
+    arrowRight.style.opacity = 0;
     return false;
 }
 
@@ -75,6 +82,9 @@ var tempBoxRight = 0 + "px";
 var tempHolder = box[0];
 
 function showArrows(){
+    if(isDone == false){
+        return;
+    }
     if(i > size - 2){
         sorted.style.opacity = 1;
     }
